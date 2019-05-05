@@ -17,7 +17,6 @@ public class Pawn extends Pieces{
 			}
 		}
 		else if(gameBoard.getGamePeice(xMove, yMove).isOpponent((Pieces)this) && yMoves == 1 && (xMoves == 1 || xMoves == -1)) {
-			System.out.println("hit");
 			return true;
 		}
 		System.out.println("You can't move that pawn, oof!");
@@ -28,7 +27,6 @@ public class Pawn extends Pieces{
 	
 	public void moveMethod(int xMove, int yMove, Board game, int origX, int origY) {
 		game.setGamePiece(this, xMove + 1, yMove + 1);
-		
 		setxPosition(xMove + 1);
 		setyPosition(yMove + 1);
 		game.removeGamePiece(origX, origY);

@@ -14,9 +14,10 @@ public class Board {
 		}
 		
 		public void printBoard(){
-			System.out.println("\t1(0)\t2(1)\t3(2)\t4(3)\t5(4)\t6(5)\t7(6)\t8(7)");
+//			System.out.println("\t1(0)\t2(1)\t3(2)\t4(3)\t5(4)\t6(5)\t7(6)\t8(7)");
+			System.out.println("\t1\t2\t3\t4\t5\t6\t7\t8");
 			for(int r = 0; r < gameBoard.length; r++) {
-				System.out.print((r + 1) + "(" + r + ") ");
+				System.out.print((r + 1) + "  ");
 				for(int c = 0; c < gameBoard[r].length; c++) {
 					if(gameBoard[r][c] == null)
 						System.out.print("\t_");

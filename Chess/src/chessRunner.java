@@ -61,11 +61,11 @@ public class chessRunner {
 				System.out.println("You are White!");
 				
 				while(correctColor == false) {
-					System.out.print("\t" + i + ": Which *ROW* is the pawn in? ");
+					System.out.print("\t" + i + ": Which *ROW* is the piece in? ");
 					y = in.nextInt() - 1;
 					System.out.print("\t*COLUMN*? ");
 					x = in.nextInt() - 1;
-					System.out.print("\t" + i + ": Which *ROW* is the pawn go to? ");
+					System.out.print("\t" + i + ": Which *ROW* should the piece go to? ");
 					y2 = in.nextInt() - 1;
 					System.out.print("\t*COLUMN*? ");
 					x2 = in.nextInt() - 1;
@@ -92,11 +92,11 @@ public class chessRunner {
 				int x = 0, y = 0, y2 = 0, x2 = 0;
 				
 				while(correctColor == false) {
-					System.out.print("\t" + i + ": Which *ROW* is the pawn in? ");
+					System.out.print("\t" + i + ": Which *ROW* is the piece in? ");
 					y = in.nextInt() - 1;
 					System.out.print("\t*COLUMN*? ");
 					x = in.nextInt() - 1;
-					System.out.print("\t" + i + ": Which *ROW* is the pawn go to? ");
+					System.out.print("\t" + i + ": Which *ROW* should the piece go to? ");
 					y2 = in.nextInt() - 1;
 					System.out.print("\t*COLUMN*? ");
 					x2 = in.nextInt() - 1;
