@@ -11,8 +11,8 @@ public class Queen  extends Pieces{
 		int yMoves = this.getyPosition() - yMove;	//Negative indicates down, positive indicates up
 		
 		//Implement direction and clearPath
-		if (getPiece(xMove, yMove, gameBoard).isOpponent((Pieces)this))
-			canTake = true;
+	//	if (getPiece(xMove, yMove, gameBoard).isOpponent((Pieces)this))
+	//		canTake = true;
 		
 		if(direction == true && canTake == true && clearPath == true)
 			return true;

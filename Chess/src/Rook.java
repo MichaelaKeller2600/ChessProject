@@ -11,20 +11,10 @@ public class Rook extends Pieces{
 		
 		if(gameBoard.getGamePeice(xMove, yMove) == null || gameBoard.getGamePeice(xMove, yMove).isOpponent((Pieces)this)) {
 			if (xMoves == 0 || yMoves > 0) {
-				int counter = 0;
-				for(int i = this.getyPosition() - 1; i <= 8; i++) {
-		//			System.out.println(gameBoard.getGamePeice(xMove, i));
-					if(gameBoard.getGamePeice(xMove, i) == null)
-						counter++;
-					else
-						break;
-				}
-				System.out.println(counter + " " + yMoves);
-				if(counter >= yMoves || (counter + 1 >= yMoves && gameBoard.getGamePeice(xMove, yMove).isOpponent((Pieces)this)))
-					return true;
-				else
-					return false;
+				System.out.println(xMoves + " " + yMoves);
+				return true;
 			}
+		}
 			else if (xMoves == 0 || yMoves < 0) {
 				int counter = 0;
 				for(int i = this.getyPosition(); i >= 0; i--) {
@@ -39,7 +29,7 @@ public class Rook extends Pieces{
 				else
 					return false;
 			}
-		}
+		
 		System.out.println("You can't move that Rook, oof!");
 		return false;
 	}

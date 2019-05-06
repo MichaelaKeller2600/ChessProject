@@ -123,7 +123,7 @@ public class chessRunner {
 	}
 	
 	public static void printCoordinates(int x, int y, int x2, int y2) {
-		System.out.printf("[%d, %d] -> [%d, %d]\n", x, y, x2, y2);
+		System.out.printf("[%d, %d] -> [%d, %d]\n", x + 1, y + 1, x2 + 1, y2 + 1);
 	}
 
 }
