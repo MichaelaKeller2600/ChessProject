@@ -25,7 +25,7 @@ public class chessRunner {
 		fun.add(new Knight(7, 1, pieceColor.black));
 		
 		fun.add(new Rook(1, 8, pieceColor.white));
-		fun.add(new Rook(8, 8, pieceColor.white));
+//		fun.add(new Rook(8, 8, pieceColor.white));
 		fun.add(new Rook(1, 1, pieceColor.black));
 		fun.add(new Rook(8, 1, pieceColor.black));
 		
@@ -49,6 +49,7 @@ public class chessRunner {
 		
 		fun.add(new Pawn(5, 4, pieceColor.black));
 		fun.add(new Pawn(4, 5, pieceColor.white));
+		fun.add(new Rook(8, 5, pieceColor.white));
 		
 		Board game = new Board();
 		game.basicSetup(fun);

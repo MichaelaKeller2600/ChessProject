@@ -6,24 +6,23 @@ public class Knight extends Pieces{
 		setPieceType(Pieces.Type.Knight);
 	}
 	public boolean canMove(int xMove, int yMove, Board gameBoard) {
-		boolean direction = false, canTake = false, clearPath = false;
-		int xMoves = this.getxPosition() - xMove;	//Negative indicates left, positive indicates right
-		int yMoves = this.getyPosition() - yMove;	//Negative indicates down, positive indicates up
+		int xMoves = this.getxPosition() - 1 - xMove;	//Negative indicates left, positive indicates right
+		int yMoves = this.getyPosition() - 1 - yMove;	//Negative indicates down, positive indicates up
 		
-		//Implement direction and clearPath
-		if (getPiece(xMove, yMove, gameBoard).isOpponent((Pieces)this))
-			canTake = true;
-		
-		if(direction == true && canTake == true && clearPath == true)
+		if(gameBoard.getGamePeice(xMove, yMove) == null) {
+			if (((xMoves == 1 || xMoves == -1 ) && (yMoves == 2 || yMoves == -2)) || ((xMoves == 2 || xMoves == -2 ) && (yMoves == 1 || yMoves == -1)))
+					return true;
+		}
+		else if(gameBoard.getGamePeice(xMove, yMove).isOpponent((Pieces)this) && (((xMoves == 1 || xMoves == -1 ) && (yMoves == 2 || yMoves == -2)) || ((xMoves == 2 || xMoves == -2 ) && (yMoves == 1 || yMoves == -1))))
 			return true;
+		System.out.println("You can't move that Kight, oof!");
 		return false;
-		
 	}
 	
 	public void moveMethod(int xMove, int yMove, Board game, int origX, int origY) {
 		game.setGamePiece(this, xMove + 1, yMove + 1);
-		setxPosition(xMove);
-		setyPosition(yMove);
+		setxPosition(xMove + 1);
+		setyPosition(yMove + 1);
 		game.removeGamePiece(origX, origY);
 	}
 	

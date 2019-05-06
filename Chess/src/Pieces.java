@@ -14,10 +14,6 @@ public abstract class Pieces {
 		return pieceType;
 	}
 	
-	public Pieces getPiece(int x, int y, Board gameBoard) {
-		return gameBoard.getGamePeice(x, y);
-	}
-	
 	public boolean isOpponent(Pieces i) {
 		return (i.pieceColor != this.pieceColor);
 	}
